@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #191c23;
+            font-family: Arial, sans-serif;
+            height: 100vh; /* Adjusted to 100vh for normal page height */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        header {
+            background-color: #ff6600;
+            width: 100%;
+            height: 3.5em;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10; /* Make sure the header is above other content */
+        }
+
+        nav ul {
+            color: white;
+            list-style: none;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            align-items: center;
+            height: 100%;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px; /* Added padding for better click area */
+            font-size: 16px;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        /* Fix hover issue by targeting <a> inside <li> */
+        .nav-links li:hover a {
+            background-color: green;
+        }
+
+        .mainimag {
+            display: grid;
+            place-items: center;
+            margin-top: 3.5em; /* Offset the image to account for the fixed header */
+            height: 100vh; /* Take up the full viewport height */
+        }
+
+        .mainimag img {
+            max-width: 100%;
+             max-height: 100%;
+    object-fit: contain;
+    position: relative;
+    top: -8em;
+    box-shadow: 0 10px 15px rgb(105 87 75);
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+            position: relative;
+            bottom: 16em;
+        }
+
+        .card {
+            width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(135 127 122);
+    overflow: hidden;
+    background-color: #797573;
+    transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            color: white;
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .card-btn {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .card-btn:hover {
+            background-color: #e65c00;
+        }
+        .large-text {
+            position: absolute;
+    top: 36%;
+    font-weight: bold;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    font-size: 19em;
+    color: #978980;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    overflow: hidden;
+    white-space: nowrap;
+        }
+
+        /* Responsive Design: Cards adjust on smaller screens */
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Workout</a></li>
+                <li><a href="#">Calculator</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="mainimag">
+            <div class="large-text">POWER</div>
+            <img src="22ufc-mcgregor01-videoSixteenByNine3000-removebg-preview.png" alt="UFC McGregor">
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Card Image">
+                <div class="card-content">
+                    <h2 class="card-title">Card Title 1</h2>
+                    <p class="card-description">This is a short description of the card content. It could be a brief overview or summary.</p>
+                    <button class="card-btn">Click</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Card Image">
+                <div class="card-content">
+                    <h2 class="card-title">Card Title 2</h2>
+                    <p class="card-description">This is another short description. Cards can have different content, but the same layout.</p>
+                    <button class="card-btn">Click</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Card Image">
+                <div class="card-content">
+                    <h2 class="card-title">Card Title 3</h2>
+                    <p class="card-description">A third card with a description. Cards can be stacked or displayed in a grid format depending on screen size.</p>
+                    <button class="card-btn">Click</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
