@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container to hold both left and right sides */
+        .content {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Left side */
+        .left {
+            flex: 1;
+            background-color: #191c23;
+            background-image: url('basketball-removebg-preview.png'),url(Nile-Symbol.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* To align text at top and bottom */
+            padding: 20px;
+        }
+
+        .text {
+            color: white;
+            font-size: 3em;
+            font-style: normal;
+            padding-left: 42px;
+            padding-top: 20px;
+        }
+
+        .text span {
+            color: #ff6600;
+        }
+
+        .text2 {
+            color: #ff6600;
+            font-weight: bolder;
+            font-size: 1.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Right side */
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .right input {
+            width: 18rem;
+            height: 2.5em;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .right button {
+            width: 12em;
+            height: 4em;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .right button:hover {
+            background-color: #8e3e2e;
+        }
+        .login-text{
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ff6600;
+        }
+        .reg{
+            color: #ff6600;
+            text-decoration: none;
+        }
+        @media screen and (min-width: 1200px) {
+}
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- Left Section -->
+        <div class="left">
+            <div class="text">
+                Internal <span>health</span> is more <span>important</span> than external <span>wealth.</span>.
+            </div>
+            <div class="text2">
+                SO BE FIT!
+            </div>
+        </div>
+
+        <!-- Right Section with Form -->
+        <div class="right">
+
+            <form method="POST">
+                <div class="login-text">Login</div>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <a href="reg.html" class="reg">Register</a>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
